@@ -1,0 +1,38 @@
+Step1: 
+a) To start the valut server, run the below command by navigating to the value exe folder in command prompt
+E:\>cd E:\vault_1.4.3_windows_amd64
+vault server --config=vault.conf
+
+b) Once the server starts, open the below url in the chrome
+http://localhost:8200/ui
+
+c) Give keys as 5 in first field, and 2 in second field
+
+d) It will give the json file, that contains keys.
+
+e) download the json and place it in the value.exe folder, (for now i downloaded this file: vault-cluster-vault-2020-07-09T05_08_33.553Z.json)
+
+f) You have to enter the first key under "keys" in json file in first screen in browser
+
+e) You have to enter the second key under "keys" in json file in second screen in browser
+
+g) Enter the root_token in json file in the thrid screen.
+
+
+Step 2:
+Now open another cmd, by navigating to the valut.exe folder and run the below 3 commands
+
+set VAULT_ADDR=http://localhost:8200
+set VAULT_TOKEN=s.hLQQHa3AVoID3NKvKsFYNRyD
+vault secrets enable -path=secret/ kv
+
+You would see secret engine being created under the below URL
+http://localhost:8200/ui/vault/secrets
+
+Step 3: To create a new secret, Go to the below screen
+http://localhost:8200/ui/vault/secrets/secret/list
+
+and click on "Create Secrete" and add your username/passwords there.
+
+
+
