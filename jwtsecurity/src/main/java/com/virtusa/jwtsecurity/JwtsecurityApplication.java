@@ -15,24 +15,3 @@ public class JwtsecurityApplication {
 	}
 	
 }
-/*
-http://localhost:9093/signup
-
-{
-    "userName":"admin",
-    "password":"admin",
-    "roles":[
-        {"roleName":"ROLE_USER"},
-        {"roleName":"ROLE_ADMIN"}
-    
-    ]
-}
-
-
-http://localhost:9093/signin
-
-{
-  "userName":"admin",
-  "userPwd":"admin"
-}
-*/
