@@ -63,7 +63,7 @@ docker container ls -a
 
 docker run --name rps-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=rpsdb -e MYSQL_USER=rps_user -e MYSQL_PASSWORD=rps_pass -d mysql
 
-docker run --name boa-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=boamumbaidb -e MYSQL_USER=boa_user -e MYSQL_PASSWORD=boa_pass -d mysql
+docker run --name boa-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=boamumbaidb -e MYSQL_USER=boa_user -e MYSQL_PASSWORD=password -d mysql
 
 
 docker run --name es-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=escustomerdb -e MYSQL_USER=demo_user -e MYSQL_PASSWORD=demo_pass -d mysql
@@ -72,7 +72,7 @@ docker run --name es-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=esc
 check the log
 docker logs demo-mysql
 running log
-docker logs -f demo-mysql
+docker logs -f boa-mysql
 
 remove the container
 
@@ -153,7 +153,7 @@ docker run -h 192.168.99.100 -p 6060:6060 --name es-ins-app
 --link es-mysql:mysql -d es-insapp2019
 
 docker run -h 192.168.99.100 -p 7070:7070 --name es-customer-app-c1
---link es-mysql:mysql -d escustomerserviceapp2020:latest
+--link es-mysql:mysql -d customerdocker-0.0.1-SNAPSHOT:latest
 
 //creating container for java application
 docker run -h 192.168.99.100 -p 7070:7070 --name dt-claim-app-c1
