@@ -14,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 @EnableCircuitBreaker
 public class CircuitbreakerdemoApplication {
 
+	//http://localhost:9091/cbcustomers
 	public static void main(String[] args) {
 		SpringApplication.run(CircuitbreakerdemoApplication.class, args);
 	}

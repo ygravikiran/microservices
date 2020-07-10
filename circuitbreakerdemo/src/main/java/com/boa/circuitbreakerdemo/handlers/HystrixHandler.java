@@ -38,7 +38,7 @@ public class HystrixHandler {
     @HystrixCommand(commandKey = "GetCustomerCommand", groupKey = "CustomerGroupKey", threadPoolKey = "Test",
     		fallbackMethod = "fallbackRequestHandler",
             commandProperties = {
-                    @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "110"),
+                    @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "5000"),
                     @HystrixProperty(name = "execution.isolation.thread.interruptOnTimeout", value = "false"),
                     @HystrixProperty(name="execution.isolation.strategy", value="SEMAPHORE")
             }
@@ -55,7 +55,7 @@ public class HystrixHandler {
 		
 	}
 	
-	public ResponseEntity<String> fallbackRequestHandler()
+	public ResponseEntity<String> fallbackRequestHandler(JwtRequest  jwtRequest)
 	{
 		
 		return restTemplate.exchange(fallBackUrl+"/customers",HttpMethod.GET,null,String.class);
