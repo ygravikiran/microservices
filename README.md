@@ -4,4 +4,6 @@
  a) Valut
  b) RabbitMQ (Erlang)
  c) Create account in PCF and upload the code
+ d) Install MySQL Database and workbench
  d) Start the applications as mentioned here https://github.com/ygravikiran/microservices/blob/master/Steps%20to%20start%20Customers%20Microservices%20as%20a%20whole.txt
+3) Common configurations are mainited here https://github.com/ygravikiran/microservices_common_configs
