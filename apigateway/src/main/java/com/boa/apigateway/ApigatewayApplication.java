@@ -12,6 +12,9 @@ import org.springframework.web.client.RestTemplate;
 @EnableDiscoveryClient
 public class ApigatewayApplication {
 
+	//http://localhost:8765/api/customer/customers?userName=admin&userPwd=admin
+	//http://localhost:8765/api/customer?userName=admin&userPwd=admin
+		
 	public static void main(String[] args) {
 		SpringApplication.run(ApigatewayApplication.class, args);
 	}
