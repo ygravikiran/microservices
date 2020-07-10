@@ -1,0 +1,20 @@
+Start the below applications in the following order
+1.Vault server
+2.Rabbitmq
+3.Eureka
+4.Config server
+5.Customer service
+6.JWT Security
+7.API Gateway
+8.Ensure PCF working
+9.Hystrix
+10.Test http://localhost:9091/cbcustoemrs
+
+POST
+
+{
+  "userName":"admin",
+  "userPwd":"admin"
+}
+
+
