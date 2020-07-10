@@ -58,7 +58,7 @@ public class HystrixHandler {
 	public ResponseEntity<String> fallbackRequestHandler(JwtRequest  jwtRequest)
 	{
 		
-		return restTemplate.exchange(fallBackUrl+"/customers",HttpMethod.GET,null,String.class);
+		return restTemplate.exchange(fallBackUrl,HttpMethod.GET,null,String.class);
 		
 		
 	}
